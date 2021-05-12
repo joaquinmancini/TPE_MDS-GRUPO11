@@ -1,5 +1,7 @@
 # TPE_MDS-GRUPO11
 
+Links: https://linktr.ee/joackomans
+
 # CRITERIO DE DONE
 
 - Clean code respetando la indentación y legibilidad del código.

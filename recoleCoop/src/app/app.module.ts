@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PedidoFormComponent } from './components/pedido-form/pedido-form.component';
 import { MaterialesComponent } from './components/materiales/materiales.component';
+import { DetallematerialesComponent } from './pages/detallemateriales/detallemateriales.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MaterialesComponent } from './components/materiales/materiales.componen
     LoginComponent,
     PedidoFormComponent,
     MaterialesComponent,
+    DetallematerialesComponent,
     
   ],
   imports: [

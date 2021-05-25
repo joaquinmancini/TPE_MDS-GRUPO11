@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PedidoFormComponent } from './components/pedido-form/pedido-form.component';
+import { PickupRejectedComponent } from './pages/pickup-rejected/pickup-rejected.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { PedidoFormComponent } from './components/pedido-form/pedido-form.compon
     AppComponent,
     LoginComponent,
     PedidoFormComponent,
+    PickupRejectedComponent,
     
   ],
   imports: [

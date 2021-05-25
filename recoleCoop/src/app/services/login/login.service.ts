@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router"
-import { User } from 'src/app/models/user/User.module';
+import { User } from 'src/app/models/user/user.module';
+
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
 
+export class LoginService {
   private user:User = {
     userName: "admin",
     password: "admin"
@@ -13,8 +14,8 @@ export class LoginService {
   constructor( private router: Router) { }
 
   isLogged(){
-    let user = JSON.parse("localStorage.getItem('user')");
-    if(user == null){
+    let user = JSON.parse(localStorage.getItem('user') +"");
+    if(user == "" || user == null || user == undefined){
       return false;
     }
     return true;
@@ -24,5 +25,9 @@ export class LoginService {
     if(this.user.userName == usr.userName && this.user.password == usr.password){
       localStorage.setItem("user", JSON.stringify(this.user));
     }
+  }
+
+  logOut(){
+    localStorage.clear();
   }
 }

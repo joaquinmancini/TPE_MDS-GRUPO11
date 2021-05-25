@@ -50,7 +50,13 @@
           Es necesario un camion
         </label>
       </div>
-    <div class="d-grid gap-2">
-        <button class="btn btn-success" type="button">Button</button>
-    </div>
+      <h5 class="textfoto">Cargar foto de los materiales a reciclar</h5>
+      <div class="mb-3">
+        <input class="form-control" type="file" id="formFile" >
+        <button type="button" class="btn btn-light" (click)="displayimg()">Subir</button>
+        <img id="img1" src="https://www.semana.com/resizer/hRn_90cCG0E0JVBxAPNgBz6wLUo=/1200x675/filters:format(jpg):quality(70)//cloudfront-us-east-1.images.arcpublishing.com/semana/4SJ5MUDADNB7NC5EAI325NVYPE.jpg" alt="">
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" type="button">Enviar</button>
+      </div>
 </form>

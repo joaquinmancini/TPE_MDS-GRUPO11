@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PedidoFormComponent } from './components/pedido-form/pedido-form.component';
-import { MaterialesComponent } from './components/materiales/materiales.component';
-import { DetallematerialesComponent } from './pages/detallemateriales/detallemateriales.component';
+import { MaterialesComponent } from './pages/materiales/materiales.component';
+import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
 
 
 @NgModule({

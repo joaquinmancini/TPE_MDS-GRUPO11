@@ -1,0 +1,33 @@
+<section id="pickup-rejected">
+
+  <div class="wrapper fadeInDown">
+    <div id="pickupRejectContent" class="p-4">
+      <div id="pickup-rejection-header">
+        <img id="pickup-rejected-img" class="fadeIn first" src={{imageRejectedPath}} alt="rejectedImage">
+        <h4 id="pickup-rejected-title" class="fadeIn second">{{pickupRejectedTitle}}</h4>
+      </div>
+      <div class="container">
+        <div id="acopio-adress" class="row fadeIn third">
+          <div class="col-md-12 col-lg-6">
+            <img id="acopio-adress-img" src={{imageAcopioPath}} alt="">
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <h5 id="acopio-adress-title">{{acopioAdressTitle}}</h5>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="offers" class="row fadeIn fourth">
+          <div class="col-md-12 col-lg-6">
+            <h5 id="pickup-offer-title">{{pickupOffersTitle}}</h5>
+          </div>
+          <div class="col-md-12 col-lg-6">
+            <button class="offers-button" (click)="offersPage()">{{offersButtonText}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

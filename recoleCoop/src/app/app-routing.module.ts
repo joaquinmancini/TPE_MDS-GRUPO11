@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
+import { PickupRejectedComponent } from './pages/pickup-rejected/pickup-rejected.component';
+import { UnderConstructionComponent } from './pages/under-construction/under-construction.component';
 
 import { MaterialesComponent } from './pages/materiales/materiales.component';
 import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
@@ -9,6 +11,8 @@ import { EntregamaterialesComponent } from './components/entregamateriales/entre
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
+  { path: 'pedido-rechazado', component: PickupRejectedComponent},
+  { path: 'en-construccion', component: UnderConstructionComponent},
   { path: 'materiales', component: MaterialesComponent},
   { path: 'detallemateriales', component: DetallematerialesComponent},
   { path: 'entregamateriales', component: EntregamaterialesComponent},

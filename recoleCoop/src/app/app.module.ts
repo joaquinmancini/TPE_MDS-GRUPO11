@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { PedidoFormComponent } from './components/pedido-form/pedido-form.component';
 import { MaterialesComponent } from './pages/materiales/materiales.component';
 import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
+import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { DetallematerialesComponent } from './components/detallemateriales/detal
     PedidoFormComponent,
     MaterialesComponent,
     DetallematerialesComponent,
+    EntregamaterialesComponent,
     
   ],
   imports: [

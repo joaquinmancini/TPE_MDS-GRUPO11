@@ -25,7 +25,7 @@ export class PickupRejectedComponent implements OnInit {
   }
 
   offersPage(){
-    this.router.navigate(["/ofertas-de-transporte"]);
+    this.router.navigate(["/en-construccion"]);
   }
 
 }

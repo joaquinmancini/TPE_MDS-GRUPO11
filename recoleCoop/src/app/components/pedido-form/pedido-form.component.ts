@@ -14,12 +14,22 @@ export class PedidoFormComponent implements OnInit {
 
   displayimg (){
     console.log("hola mundo");
-    let elemento = document.getElementById('img1');
-    if (elemento != null){
+    let imagen = document.getElementById('img1');
+    let botonelim = document.getElementById('eliminar');
+    if (imagen != null && botonelim != null){
  
-        elemento.style.display = "block";
-      
+        imagen.style.display = "block";
+        botonelim.style.display = "block";
     }
+  }
+  
+  displaynoneimg(){
+    let imagen = document.getElementById('img1');
+    let botonelim = document.getElementById('eliminar');
+    if (imagen != null && botonelim != null){
+ 
+        imagen.style.display = "none";
+        botonelim.style.display = "none";
     }
-    
+  }
 }

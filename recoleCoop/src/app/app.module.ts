@@ -7,6 +7,9 @@ import { LoginComponent } from './pages/login/login.component';
 import { PedidoFormComponent } from './components/pedido-form/pedido-form.component';
 import { PickupRejectedComponent } from './pages/pickup-rejected/pickup-rejected.component';
 import { UnderConstructionComponent } from './pages/under-construction/under-construction.component';
+import { MaterialesComponent } from './pages/materiales/materiales.component';
+import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
+import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { UnderConstructionComponent } from './pages/under-construction/under-con
     PedidoFormComponent,
     PickupRejectedComponent,
     UnderConstructionComponent,
-    
+    MaterialesComponent,
+    DetallematerialesComponent,
+    EntregamaterialesComponent,
   ],
   imports: [
     BrowserModule,

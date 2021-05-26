@@ -28,17 +28,30 @@
   }
 
   #pickup-rejection-header {
-
   }
 
   #pickup-rejected-img {
-
   }
 
-  #pickup-rejected-title {
+  #pickup-rejected-title, #acopio-adress-title {
     white-space: pre-wrap;
     margin: 0;
     padding: 1.5rem 0;
+  }
+
+  #acopio-adress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  #acopio-adress-img {
+    width: 100%;
+  }
+
+  #acopio-adress-title{
   }
 
   /* ANIMATIONS */

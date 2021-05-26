@@ -12,4 +12,14 @@ export class PedidoFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displayimg (){
+    console.log("hola mundo");
+    let elemento = document.getElementById('img1');
+    if (elemento != null){
+ 
+        elemento.style.display = "block";
+      
+    }
+    }
+    
 }

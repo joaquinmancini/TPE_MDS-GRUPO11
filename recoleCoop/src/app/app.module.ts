@@ -12,6 +12,7 @@ import { UnderConstructionComponent } from './pages/under-construction/under-con
 import { MaterialesComponent } from './pages/materiales/materiales.component';
 import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
+import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { EntregamaterialesComponent } from './components/entregamateriales/entre
     MaterialesComponent,
     DetallematerialesComponent,
     EntregamaterialesComponent,
+    RetiroDeMaterialesComponent,
   ],
   imports: [
     BrowserModule,

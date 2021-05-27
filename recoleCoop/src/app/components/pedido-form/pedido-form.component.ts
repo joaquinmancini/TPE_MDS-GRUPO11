@@ -32,4 +32,8 @@ export class PedidoFormComponent implements OnInit {
         botonelim.style.display = "none";
     }
   }
+
+  enviarPedido() {
+    window.location.href="http://localhost:4200/retiro-material-exitoso";
+  }
 }

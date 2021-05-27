@@ -8,6 +8,7 @@ import { MaterialesComponent } from './pages/materiales/materiales.component';
 import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
 import { PedidoFormComponent } from './components/pedido-form/pedido-form.component';
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
+import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 
 const routes: Routes = [
   { path: 'home', component: MaterialesComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'detallemateriales', component: DetallematerialesComponent},
   { path: 'entregamateriales', component: EntregamaterialesComponent},
   { path: 'pedido-form', component: PedidoFormComponent},
+  { path: 'retiro-material-exitoso', component: RetiroDeMaterialesComponent},
   { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
   //{ path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},
 ];

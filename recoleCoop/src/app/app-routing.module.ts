@@ -11,7 +11,7 @@ import { EntregamaterialesComponent } from './components/entregamateriales/entre
 import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 
 const routes: Routes = [
-  { path: 'home', component: MaterialesComponent},
+  { path: '', component: MaterialesComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pedido-rechazado', component: PickupRejectedComponent},
   { path: 'en-construccion', component: UnderConstructionComponent},
@@ -19,8 +19,9 @@ const routes: Routes = [
   { path: 'entregamateriales', component: EntregamaterialesComponent},
   { path: 'pedido-form', component: PedidoFormComponent},
   { path: 'retiro-material-exitoso', component: RetiroDeMaterialesComponent},
+  { path: 'home', redirectTo: '', pathMatch: 'full'},
   { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
-  //{ path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},
+  { path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},
 ];
 
 @NgModule({

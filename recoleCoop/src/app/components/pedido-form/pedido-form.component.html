@@ -1,0 +1,69 @@
+<h3>Ingrese la siguiente información</h3>
+<h3>para coordinar el retiro</h3>
+<form>
+    <div class="mb-3">
+        <input class="form-control" type="text" placeholder="Admin admin" aria-label="Disabled input example" disabled>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="text" placeholder="Admin 12345" aria-label="Disabled input example" disabled>
+    </div>
+    <div class="mb-3 row">
+        <div class="col-4"><input class="form-control" type="text" placeholder="Cod.Área*" aria-label="default input example"></div>   
+        <div class="col-8"><input class="form-control" type="text" placeholder="Numero de celular*" aria-label="default input example"></div>
+    </div>
+    <div class="mb-3 row">
+      
+        <div class="col-4">
+          <label for="exampleFormControlSelect1">Horario disponible: *</label>
+        </div>
+        <div class="col-8">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>9 a 12hs</option>
+            <option value="1">12 a 15hs</option>
+            <option value="2">15 a 18hs</option>
+          </select>
+        </div>
+      
+    </div>
+    <h5>Seleccione el volumen de materiales: *</h5>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Entra en una caja
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+        <label class="form-check-label" for="flexRadioDefault2">
+          Entra en el baul de un auto
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Entra en la caja de una camioneta
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Es necesario un camion
+        </label>
+      </div>
+      <h5 class="textfoto">Cargar foto de los materiales a reciclar</h5>
+      <div class="mb-3">
+        <input class="form-control" type="file" id="formFile" >
+        <div class="row">
+          <div class="col-6">
+            <button type="button" class="btn btn-light" (click)="displayimg()">Subir</button>
+          </div>
+          <div id="eliminar" class="col-6">
+            <button type="button" class="btn btn-danger" (click)="displaynoneimg()">Eliminar</button>
+          </div>
+        </div>
+        <img id="img1" src="https://www.semana.com/resizer/hRn_90cCG0E0JVBxAPNgBz6wLUo=/1200x675/filters:format(jpg):quality(70)//cloudfront-us-east-1.images.arcpublishing.com/semana/4SJ5MUDADNB7NC5EAI325NVYPE.jpg" alt="">
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" type="button">Enviar</button>
+      </div>
+</form>

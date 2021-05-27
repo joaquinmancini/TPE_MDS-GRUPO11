@@ -1,0 +1,88 @@
+.materiales {
+  background-color: rgb(245,245,245);
+}
+
+.links {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.links:link {
+  color: #265301;
+}
+
+.links:visited {
+  color: #437A16;
+}
+
+.links:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+.links:hover {
+  border-bottom: 1px solid;
+  background: #CDFEAA;
+}
+
+.links:active {
+  background: #265301;
+  color: #CDFEAA;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.a_center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 40%;
+  }
+
+.image-parent {
+    max-width: 40px;
+}
+
+
+/**/
+
+  /* STRUCTURE */
+
+  #under-construction {
+    position: relative;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 5px;
+  }
+
+  #underConstructionContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  #under-construction-img {
+      width: 70%;
+  }
+
+  #under-construction-title, #under-construction-description {
+      padding: 2rem;
+      margin: 0;
+  }

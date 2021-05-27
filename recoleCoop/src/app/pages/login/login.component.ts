@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user/User.module';
+import { User } from 'src/app/models/user/user.module';
 import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
@@ -16,9 +16,10 @@ export class LoginComponent implements OnInit {
     password: ""
   }
   constructor(private _login:LoginService, private router: Router) { 
-    if(!this._login.isLogged){
+    if(this._login.isLogged()){
       this.router.navigate(["/home"]);
     }
+    localStorage.clear();
   }
 
   ngOnInit(): void {
@@ -27,19 +28,19 @@ export class LoginComponent implements OnInit {
 
   login(){
     this._login.login(this.user);
-
     if(this._login.isLogged()){
       this.router.navigate(["/home"]);
+    }else{
+      this.errorMessage = "Contraseña y/o nombre de usuario incorrectos";
     }
-    this.errorMessage = "Contraseña y/o nombre de usuario incorrectos";
   }
 
-  setUserName(){
-  //  this.user.userName = event.target.value;
+  setUserName(event:any){
+  this.user.userName = event.target.value;
   }
 
-  setPassword(){
-    // this.user.password =  event.target.value
+  setPassword(event:any){
+    this.user.password =  event.target.value
   }
 
 }

@@ -10,15 +10,15 @@ import { PedidoFormComponent } from './components/pedido-form/pedido-form.compon
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 
 const routes: Routes = [
+  { path: 'home', component: MaterialesComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pedido-rechazado', component: PickupRejectedComponent},
   { path: 'en-construccion', component: UnderConstructionComponent},
-  { path: 'materiales', component: MaterialesComponent},
   { path: 'detallemateriales', component: DetallematerialesComponent},
   { path: 'entregamateriales', component: EntregamaterialesComponent},
   { path: 'pedido-form', component: PedidoFormComponent},
-  { path: '', redirectTo: 'login',pathMatch: 'full'},
-  { path: '**', redirectTo: 'login', pathMatch: 'full'},
+  { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
+  //{ path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},
 ];
 
 @NgModule({

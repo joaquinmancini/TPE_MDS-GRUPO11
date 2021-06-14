@@ -1,0 +1,11 @@
+Abrir una terminal y ejecutar el siguiente comando
+Este se hace solo la primer vez y el contenedor queda funcionando:
+docker run --name recolecoop -e POSTGRES_PASSWORD=root -p 5432:5432 -d postgres
+
+docker exec -it recolecoop bash
+psql -U postgres
+
+CREATE DATABASE recolecoop;
+
+Luego el contenedor se levanta con:
+docker start recolecoop

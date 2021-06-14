@@ -6,15 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MaterialService {
 
-
     @Autowired
     private MeterialRepository materialRepository;
-
 
     public void saveMaterial(Material material) {
         materialRepository.save(material);
@@ -24,8 +21,8 @@ public class MaterialService {
         return materialRepository.findAll();
     }
 
-    public Optional<Material> getMaterialById(Long id_material) {
-        return materialRepository.findById(id_material);
+    public Material getMaterialById(Long id_material) {
+        return materialRepository.findById(id_material).get();
     }
 
     public void deleteMaterial(Long id_material) {

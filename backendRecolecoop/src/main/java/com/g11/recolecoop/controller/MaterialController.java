@@ -10,28 +10,30 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api/material")
 public class MaterialController {
 
     @Autowired
     private MaterialService materialService;
 
-    @PostMapping("api/saveMaterial")
+    @PostMapping("/saveMaterial")
     public void saveMaterial(@Valid @RequestBody Material material) {
         materialService.saveMaterial(material);
     }
 
-    @GetMapping("api/getMaterials")
+    @GetMapping("/getMaterials")
     public List<Material> getMaterials() {
         return materialService.getAllMaterials();
     }
 
-    @GetMapping("api/getMaterialById")
-    public Optional<Material> getMaterialById(@Valid @RequestParam Long id_material) {
+    @GetMapping("/getMaterialById")
+    public Material getMaterialById(@Valid @RequestParam Long id_material) {
         return materialService.getMaterialById(id_material);
     }
 
-    @PostMapping("api/deleteMaterial")
+    @PostMapping("/deleteMaterial")
     public void deleteMaterial(@Valid @RequestParam Long id_material) {
         materialService.deleteMaterial(id_material);
     }
+
 }

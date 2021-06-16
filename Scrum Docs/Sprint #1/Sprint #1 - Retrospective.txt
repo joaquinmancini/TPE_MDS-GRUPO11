@@ -1,0 +1,15 @@
+Qué ha funcionado bien en el último Sprint.
+- La colaboracion y el trabajo en equipo.
+- Que se llegaron a finalizar las funcionalidades pedidas del sprint.
+
+Cuáles cosas hay que mejorar de cara al siguiente Sprint.
+- Abocarnos solo a las funcionalidades del sprint.
+- Realizar los test correspondientes y documentar los mismos.
+- Modificar el criterio de done en relacion a las exigencias de los testeos.
+
+Problemas que haya tenido para poder progresar correctamente en el último Sprint.
+- Inconvenientes con la tecnologia utilizada.
+
+Recomendaciones a aplicar en el siguiente Sprint.
+- Comenzar con tiempo.
+- Modificar criterio de done teniendo en cuenta los tiempos que tenemos por sprint.

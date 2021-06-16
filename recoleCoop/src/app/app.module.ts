@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { MaterialesComponent } from './pages/materiales/materiales.component';
 import { DetallematerialesComponent } from './components/detallemateriales/detallemateriales.component';
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
+import { PedidoListComponent } from './components/pedido-list/pedido-list.component';
 
 
 @NgModule({
@@ -28,10 +30,12 @@ import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/r
     DetallematerialesComponent,
     EntregamaterialesComponent,
     RetiroDeMaterialesComponent,
+    PedidoListComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,4 +29,5 @@ public class MaterialService {
         materialRepository.deleteById(id_material);
     }
 
+    public void updateMaterial(Material material) { materialRepository.save(material) ; }
 }

@@ -36,4 +36,7 @@ public class MaterialController {
         materialService.deleteMaterial(id_material);
     }
 
+    @PostMapping("/updateMaterial")
+    public void updateMaterial(@Valid @RequestBody Material material) { materialService.updateMaterial(material); }
+
 }

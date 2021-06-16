@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 
 export class PedidoService {
-  url: string = "https://60c61a5519aa1e001769ed12.mockapi.io/api/";
-  pedidos:string = "getPedidos";
+  url: string = "http://localhost:8080/api/pedido";
+  pedidos:string = "/getPedidos";
   
   constructor(public http: HttpClient) { }
 

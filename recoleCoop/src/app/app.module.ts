@@ -15,6 +15,7 @@ import { DetallematerialesComponent } from './components/detallemateriales/detal
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 import { PedidoListComponent } from './components/pedido-list/pedido-list.component';
+import { ManageMaterialsComponent } from './components/manage-materials/manage-materials.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { PedidoListComponent } from './components/pedido-list/pedido-list.compon
     EntregamaterialesComponent,
     RetiroDeMaterialesComponent,
     PedidoListComponent,
+    ManageMaterialsComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import { PedidoFormComponent } from './components/pedido-form/pedido-form.compon
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 import { PedidoListComponent  } from './components/pedido-list/pedido-list.component';
+import {ManageMaterialsComponent} from "./components/manage-materials/manage-materials.component";
 
 const routes: Routes = [
   { path: '', component: MaterialesComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'entregamateriales', component: EntregamaterialesComponent},
   { path: 'pedido-form', component: PedidoFormComponent},
   { path: 'retiro-material-exitoso', component: RetiroDeMaterialesComponent},
+  { path: 'gestion-materiales', component: ManageMaterialsComponent},
   { path: 'home', redirectTo: '', pathMatch: 'full'},
   { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
   { path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},
@@ -30,3 +32,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+

@@ -1,0 +1,30 @@
+<div class="container">
+  <h3>Esta a punto de modificar un material</h3>
+  <form>
+    <div class="mb-3">
+      <input id="id_material" class="form-control" type="number" placeholder="id_material" aria-label="input example"
+        required [(ngModel)]="material.id_material" name="id_material">
+    </div>
+    <div class="mb-3">
+      <input id="name" class="form-control" type="text" placeholder="nombre" aria-label="input example" required
+        [(ngModel)]="material.name" name="name">
+    </div>
+    <div class="mb-3">
+      <textarea id="descripcion" class="form-control" type="text" placeholder="descripcion" aria-label="input example"
+        [(ngModel)]="material.description" name="description"></textarea>
+    </div>
+    <div class="mb-3">
+      <div class="row">
+        <img id="current-material-image" src="" alt="">
+      </div>
+      <input id="imgMaterial" class="form-control" type="text" [(ngModel)]="material.imgBase64" name="imgBase64">
+    </div>
+    <!-- <div class="mb-3">
+      <input id="weight" class="form-control" type="hidden" value="0" [(ngModel)]="material.weight">
+    </div> -->
+    <div class="d-block gap-2">
+      <button class="btn btn-success col-5" type="button" (click)="saveMaterial()">Confirmar</button>
+      <button class="btn btn-danger offset-2 col-5" type="button" (click)="onNoClick()">Cancelar</button>
+    </div>
+  </form>
+</div>

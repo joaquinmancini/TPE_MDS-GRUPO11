@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +21,11 @@ import { DetallematerialesComponent } from './components/detallemateriales/detal
 import { EntregamaterialesComponent } from './components/entregamateriales/entregamateriales.component';
 import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 import { PedidoListComponent } from './components/pedido-list/pedido-list.component';
+import { ManageMaterialsComponent } from './components/manage-materials/manage-materials.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialCreateFormComponent } from './components/material-create-form/material-create-form.component';
+import { MaterialesService } from './services/materiales/materiales.service';
+import { MaterialDeleteConfirmationComponent } from './components/material-delete-confirmation/material-delete-confirmation.component';
 
 
 @NgModule({
@@ -31,13 +42,25 @@ import { PedidoListComponent } from './components/pedido-list/pedido-list.compon
     EntregamaterialesComponent,
     RetiroDeMaterialesComponent,
     PedidoListComponent,
+    ManageMaterialsComponent,
+    MaterialCreateFormComponent,
+    MaterialDeleteConfirmationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    FontAwesomeModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MaterialesService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    library.add(faFilm);
+  }
+ }

@@ -39,7 +39,6 @@ export class ManageMaterialsComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(MaterialCreateFormComponent, {});
     const dialogRefDel = this.dialogDel.open(MaterialDeleteConfirmationComponent, {});
-    dialogRefDel.componentInstance.selectedMaterial.id_material;
   }
 
   ngOnInit(): void {

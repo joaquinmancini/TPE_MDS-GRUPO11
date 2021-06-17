@@ -37,26 +37,28 @@ export class MaterialDeleteConfirmationComponent implements OnInit {
 
   message = '';
 
-  constructor(private service: MaterialesService, private dialogRefDel: MatDialogRef < MaterialDeleteConfirmationComponent >, private _snackBar: MatSnackBar) {
-
+  constructor(private service: MaterialesService, private dialogRefDe: MatDialogRef < MaterialDeleteConfirmationComponent >,@Inject(MAT_DIALOG_DATA) public data: any, private _snackBar: MatSnackBar) {
+    // this.selectedMaterial.id_material=this.data.id_material;
   }
 
   ngOnInit(): void {}
 
 
   deleteMaterial(): void {
-    this.service.deleteMaterial(this.selectedMaterial.id_material!)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.openSnackBar(this.selectedMaterial.name!);
-        }
-      )
-
+    console.log(this.data);
+    // this.service.deleteMaterial(this.selectedMaterial.id_material!)
+    //   .subscribe(
+    //     response => {
+    //       console.log(response);
+    //       this.openSnackBar(this.selectedMaterial.name!);
+    //     },
+    //     error => {
+    //       console.log(error);
+    //     });
   }
 
   onNoClick(): void {
-    this.dialogRefDel.close();
+    this.dialogRefDe.close();
   }
 
   openSnackBar(message: string) {

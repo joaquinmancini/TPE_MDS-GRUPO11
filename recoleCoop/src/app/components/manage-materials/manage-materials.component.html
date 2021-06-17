@@ -1,1 +1,38 @@
-<p>manage-materials works!</p>
+<div class="container py-5">
+  <h1 class="text-center"> Lista de materiales </h1>
+  <div class="row py-5">
+    <div class="col-lg-10 mx-auto">
+      <div class="card rounded shadow border-0">
+        <div class="card-body p-5 bg-white rounded">
+          <div class="table-responsive">
+            <table tyle="width:100%" class="table table-striped table-bordered">
+              <thead>
+              <tr>
+                <th scope="col" class="text-center">Material</th>
+                <th scope="col" class="text-center">Descripcion</th>
+                <th scope="col" class="text-center">Imagen</th>
+                <th scope="col" class="text-center">Modificar</th>
+                <th scope="col" class="text-center">Eliminar</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let material of materiales">
+                <th scope="row" class="text-center">{{material.name}}</th>
+                <td class="text-center">{{material.description}}</td>
+                <td class="text-center">{{material.imgBase64}}</td>
+                <td class="text-center">
+                  <button type="button" class="btn btn-success" (click)="onEdit()"><i class="fas fa-edit"></i></button>
+                </td>
+                <td class="text-center">
+                  <button type="button" class="btn btn-danger" (click)="onDelete()"><i class="fas fa-trash"></i></button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <button type="button" class="btn btn-info" (click)="onCreate()">Añadir material <i class="fas fa-plus-square"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

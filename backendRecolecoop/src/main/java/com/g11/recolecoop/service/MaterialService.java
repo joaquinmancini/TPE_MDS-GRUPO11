@@ -1,7 +1,7 @@
 package com.g11.recolecoop.service;
 
 import com.g11.recolecoop.entity.Material;
-import com.g11.recolecoop.repository.MeterialRepository;
+import com.g11.recolecoop.repository.MaterialRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +11,7 @@ import java.util.List;
 public class MaterialService {
 
     @Autowired
-    private MeterialRepository materialRepository;
+    private MaterialRepository materialRepository;
 
     public void saveMaterial(Material material) {
         materialRepository.save(material);

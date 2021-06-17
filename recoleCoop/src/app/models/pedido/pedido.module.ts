@@ -1,8 +1,9 @@
 export interface Pedido {
     id:number;
     solicitante: string;
-    direccion:string;
+    direccion: string;
+    telefono: string;
     email: string;
     horario: string;
-    volumen: string;
+    volumen: any;
 }

@@ -18,11 +18,13 @@ public class PedidoController {
 
     @GetMapping("/getPedidos")
     public List<Pedido> getPedidos() {
-        return pedidoService.getPedidos();
+        System.out.println("getPedidos");return pedidoService.getPedidos();
     }
 
     @PostMapping("/savePedido")
     public void savePedido(@Valid @RequestBody Pedido pedido) {
-        pedidoService.savePedido(pedido);
+        pedido.setId(null);
+        System.out.println("savePedido");pedidoService.savePedido(pedido);
     }
+
 }

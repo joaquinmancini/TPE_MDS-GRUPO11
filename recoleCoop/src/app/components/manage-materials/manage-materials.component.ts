@@ -11,11 +11,15 @@ import {
 import {
   MatDialog,
   MatDialogConfig,
-  MatDialogRef
+  MatDialogRef,
+  MAT_DIALOG_DATA
 } from "@angular/material/dialog";
 import {
   MaterialCreateFormComponent
 } from '../material-create-form/material-create-form.component';
+import {
+  MaterialDeleteConfirmationComponent
+} from '../material-delete-confirmation/material-delete-confirmation.component';
 
 @Component({
   selector: 'app-manage-materials',
@@ -24,14 +28,18 @@ import {
 })
 export class ManageMaterialsComponent implements OnInit {
 
+
   public materiales: Material[];
-  constructor(private _material: MaterialesService, 
-    private dialog: MatDialog) {
+  constructor(private _material: MaterialesService,
+    private dialog: MatDialog,
+    private dialogDel: MatDialog) {
     this.materiales = [];
   }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(MaterialCreateFormComponent, {});
+    const dialogRefDel = this.dialogDel.open(MaterialDeleteConfirmationComponent, {});
+    dialogRefDel.componentInstance.selectedMaterial.id_material;
   }
 
   ngOnInit(): void {
@@ -39,22 +47,19 @@ export class ManageMaterialsComponent implements OnInit {
       .subscribe(data => this.materiales = data);
   }
 
+
+  //Acciones
   onCreate() {
     this.dialog.open(MaterialCreateFormComponent);
   }
 
   onEdit() {
-    
-  }
-
-  onDelete() {
 
   }
 
-  onSubmit(){
-    
+  onDelete(id_material:number) {
+    this.dialogDel.open(MaterialDeleteConfirmationComponent);
   }
-
 
 
 }

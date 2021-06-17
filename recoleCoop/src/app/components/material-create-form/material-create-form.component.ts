@@ -20,7 +20,7 @@ export class MaterialCreateFormComponent implements OnInit {
   submitted=false;
 
 
-  constructor(public service:MaterialesService, public dialogRef: MatDialogRef<MaterialCreateFormComponent>,) { }
+  constructor(private service:MaterialesService, private dialogRef: MatDialogRef<MaterialCreateFormComponent>) { }
 
   ngOnInit(): void {
   }

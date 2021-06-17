@@ -37,7 +37,7 @@ export class MaterialesService {
     return this.http.post(this.url+this.update_material, data);
   }
 
-  deleteMaterial(id_material:string): Observable<any> {
+  deleteMaterial(id_material:number): Observable<any> {
     return this.http.post(this.url+this.delete_material+id_material, null);
   }
 

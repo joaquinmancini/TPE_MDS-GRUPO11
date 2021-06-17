@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,6 +53,7 @@ import { MaterialDeleteConfirmationComponent } from './components/material-delet
     FormsModule,
     FontAwesomeModule,
     MatDialogModule,
+    MatSnackBarModule,
     BrowserAnimationsModule
   ],
   providers: [MaterialesService],

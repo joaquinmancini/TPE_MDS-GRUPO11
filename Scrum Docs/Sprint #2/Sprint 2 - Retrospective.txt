@@ -1,0 +1,7 @@
+Qué ha funcionado bien en el último Sprint.
+
+Cuáles cosas hay que mejorar de cara al siguiente Sprint.
+
+Problemas que haya tenido para poder progresar correctamente en el último Sprint.
+
+Recomendaciones a aplicar en el siguiente Sprint.

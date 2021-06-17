@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Material } from 'src/app/models/material/material.model';
 import { MaterialesService } from 'src/app/services/materiales/materiales.service';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-material-form',
@@ -19,7 +20,7 @@ export class MaterialCreateFormComponent implements OnInit {
   submitted=false;
 
 
-  constructor(public service:MaterialesService) { }
+  constructor(public service:MaterialesService, public dialogRef: MatDialogRef<MaterialCreateFormComponent>,) { }
 
   ngOnInit(): void {
   }
@@ -42,6 +43,10 @@ export class MaterialCreateFormComponent implements OnInit {
         error => {
           console.log(error);
         });
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

@@ -10,7 +10,8 @@ import {
 } from 'src/app/models/material/material.model';
 import {
   MatDialog,
-  MatDialogConfig
+  MatDialogConfig,
+  MatDialogRef
 } from "@angular/material/dialog";
 import {
   MaterialCreateFormComponent
@@ -27,6 +28,10 @@ export class ManageMaterialsComponent implements OnInit {
   constructor(private _material: MaterialesService, 
     private dialog: MatDialog) {
     this.materiales = [];
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(MaterialCreateFormComponent, {});
   }
 
   ngOnInit(): void {
@@ -49,5 +54,7 @@ export class ManageMaterialsComponent implements OnInit {
   onSubmit(){
     
   }
+
+
 
 }

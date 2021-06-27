@@ -1,7 +1,15 @@
 Qué ha funcionado bien en el último Sprint.
+- La colaboracion, la comunicacion y el trabajo en equipo.
+- Que nos abocamos solo a las funcionales del sprint.
 
 Cuáles cosas hay que mejorar de cara al siguiente Sprint.
+- Realizar los test correspondientes y documentar los mismos.
+- Estimar mejor las funcionalidades.
 
 Problemas que haya tenido para poder progresar correctamente en el último Sprint.
+- Inconvenientes con la tecnologia utilizada.
+- Reasignacion de tareas a raiz de la baja de integrantes.
 
 Recomendaciones a aplicar en el siguiente Sprint.
+- Comenzar con tiempo.
+- Capacitarnos mejor en la tecnologia que estamos usando.

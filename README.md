@@ -16,6 +16,6 @@ Links: https://linktr.ee/joackomans
 
 - Cada commit tiene que tener su respectivo comentario el cual tiene que ser descriptivo.
 
-- Code review por 2 personas (diferentes del desarrollador)  para realizar el pull request a la rama MASTER: un compañero debe verificar el código y quien realice el merge debe chequearlo también.
+- Code review por 1 persona (diferente del desarrollador)  para realizar el pull request a la rama MASTER: un compañero debe verificar el código y quien realice el merge debe chequearlo también.
 
 - En la descripción de la tarea en Jira hay un link hacia el commit en github

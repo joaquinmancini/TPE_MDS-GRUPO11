@@ -1,0 +1,32 @@
+<div class="container py-5">
+    <h1 class="text-center"> Lista de cartoneros con sus materiales </h1>
+      <div class="col-lg-10 mx-auto">
+        <div class="card rounded shadow border-0">
+          <div class="card-body p-5 bg-white rounded">
+            <div class="table-responsive">
+              <table tyle="width:100%" class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre y Apellido </th>
+                    <th scope="col">Material</th>
+                    <th scope="col">Kilos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cartonero of cartoneros">
+                    <th>{{cartonero.nombre}} {{cartonero.apellido}}</th>
+                    <td> <li class="list-unstyled" *ngFor="let material of cartonero.cantidad_materiales">
+                        {{material.nombre}} 
+                        </li>
+                    </td>
+                    <td> <li class="list-unstyled" *ngFor="let material of cartonero.cantidad_materiales">
+                      {{material.kilos}} 
+                      </li>
+                  </td>
+                </tbody>
+              </table>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

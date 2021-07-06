@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialCreateFormComponent } from './components/material-create-form/material-create-form.component';
 import { MaterialesService } from './services/materiales/materiales.service';
 import { MaterialDeleteConfirmationComponent } from './components/material-delete-confirmation/material-delete-confirmation.component';
+import { MaterialUpdateFormComponent } from './components/material-update-form/material-update-form/material-update-form.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { MaterialDeleteConfirmationComponent } from './components/material-delet
     ManageMaterialsComponent,
     MaterialCreateFormComponent,
     MaterialDeleteConfirmationComponent,
+    MaterialUpdateFormComponent,
   ],
   imports: [
     BrowserModule,

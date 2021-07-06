@@ -1,5 +1,5 @@
 <div class="container">
-  <h3>Esta a punto de modificar un material</h3>
+  <h3>Nuevo material</h3>
   <form>
     <div class="mb-3">
       <input id="id_material" class="form-control" type="number" placeholder="id_material" aria-label="input example"
@@ -14,9 +14,6 @@
         [(ngModel)]="material.description" name="description"></textarea>
     </div>
     <div class="mb-3">
-      <div class="row">
-        <img id="current-material-image" src="" alt="">
-      </div>
       <input id="imgMaterial" class="form-control" type="text" [(ngModel)]="material.imgBase64" name="imgBase64">
     </div>
     <!-- <div class="mb-3">

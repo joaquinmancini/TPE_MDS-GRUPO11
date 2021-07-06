@@ -19,28 +19,29 @@ import {
 import {
   Subscriber
 } from 'rxjs';
-import { MaterialDataService } from 'src/app/services/materialData/material-data.service';
+import {
+  MaterialDataService
+} from 'src/app/services/materialData/material-data.service';
 
 @Component({
-  selector: 'app-material-delete-confirmation',
-  templateUrl: './material-delete-confirmation.component.html',
-  styleUrls: ['./material-delete-confirmation.component.scss']
+  selector: 'app-material-update-form',
+  templateUrl: './material-update-form.component.html',
+  styleUrls: ['./material-update-form.component.scss']
 })
-export class MaterialDeleteConfirmationComponent implements OnInit {
+export class MaterialUpdateFormComponent implements OnInit {
 
   selectedMaterial: Material = new Material;
 
-  constructor(private service: MaterialesService, private dialogRefDe: MatDialogRef < MaterialDeleteConfirmationComponent >,
-    private materialDataService: MaterialDataService, private _snackBar: MatSnackBar) {
-  }
+  constructor(private service: MaterialesService, private dialogRefDe: MatDialogRef < MaterialUpdateFormComponent > ,
+    private materialDataService: MaterialDataService, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.selectedMaterial=this.materialDataService.material;
   }
 
-
-  deleteMaterial(): void {
-    this.service.deleteMaterial(this.selectedMaterial.id_material!)
+  updateMaterial(): void {
+    // console.log(this.selectedMaterial);
+    this.service.updateMaterial(this.selectedMaterial)
       .subscribe(
         response => {
           console.log(response);
@@ -57,7 +58,6 @@ export class MaterialDeleteConfirmationComponent implements OnInit {
   }
 
   openSnackBar(message: string) {
-    this._snackBar.open(message, " ha sido borrado");
+    this._snackBar.open(message, " ha sido actualizado");
   }
-
 }

@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faFilm } from '@fortawesome/free-solid-svg-icons';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSortModule } from '@angular/material/sort';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -53,9 +55,12 @@ import { MaterialUpdateFormComponent } from './components/material-update-form/m
     AppRoutingModule, 
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     MatDialogModule,
     MatSnackBarModule,
+    MatFormFieldModule,
+    MatSortModule,
     BrowserAnimationsModule
   ],
   providers: [MaterialesService],

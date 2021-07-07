@@ -7,19 +7,9 @@ import {
   Material
 } from 'src/app/models/material/material.model';
 import {
-  MaterialesService
-} from 'src/app/services/materiales/materiales.service';
-import {
   MatDialogRef,
   MAT_DIALOG_DATA
 } from '@angular/material/dialog';
-import {
-  MatSnackBar
-} from '@angular/material/snack-bar';
-import {
-  Subscriber
-} from 'rxjs';
-import { MaterialDataService } from 'src/app/services/materialData/material-data.service';
 
 @Component({
   selector: 'app-material-delete-confirmation',
@@ -28,36 +18,22 @@ import { MaterialDataService } from 'src/app/services/materialData/material-data
 })
 export class MaterialDeleteConfirmationComponent implements OnInit {
 
-  selectedMaterial: Material = new Material;
+  currentMaterial: Material;
 
-  constructor(private service: MaterialesService, private dialogRefDe: MatDialogRef < MaterialDeleteConfirmationComponent >,
-    private materialDataService: MaterialDataService, private _snackBar: MatSnackBar) {
-  }
+  constructor(private dialogRef: MatDialogRef < MaterialDeleteConfirmationComponent > ,
+    @Inject(MAT_DIALOG_DATA) public data: Material) {
+      this.currentMaterial = data;
+    }
 
-  ngOnInit(): void {
-    this.selectedMaterial=this.materialDataService.material;
-  }
+  ngOnInit(): void {}
 
 
   deleteMaterial(): void {
-    this.service.deleteMaterial(this.selectedMaterial.id_material!)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.onNoClick();
-          this.openSnackBar(this.selectedMaterial.name!);
-        },
-        error => {
-          console.log(error);
-        });
+    this.dialogRef.close(Object.assign(new Material(), this.data));    
   }
 
   onNoClick(): void {
-    this.dialogRefDe.close();
-  }
-
-  openSnackBar(message: string) {
-    this._snackBar.open(message, " ha sido borrado");
+    this.dialogRef.close();
   }
 
 }

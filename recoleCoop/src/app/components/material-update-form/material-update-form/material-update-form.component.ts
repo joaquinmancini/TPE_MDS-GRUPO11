@@ -7,21 +7,14 @@ import {
   Material
 } from 'src/app/models/material/material.model';
 import {
-  MaterialesService
-} from 'src/app/services/materiales/materiales.service';
-import {
   MatDialogRef,
   MAT_DIALOG_DATA
 } from '@angular/material/dialog';
 import {
-  MatSnackBar
-} from '@angular/material/snack-bar';
-import {
-  Subscriber
-} from 'rxjs';
-import {
-  MaterialDataService
-} from 'src/app/services/materialData/material-data.service';
+  FormControl,
+  FormGroup,
+  Validators
+} from '@angular/forms';
 
 @Component({
   selector: 'app-material-update-form',
@@ -30,34 +23,29 @@ import {
 })
 export class MaterialUpdateFormComponent implements OnInit {
 
-  selectedMaterial: Material = new Material;
+  formInstance: FormGroup;
+  currentMaterial: Material;
 
-  constructor(private service: MaterialesService, private dialogRefDe: MatDialogRef < MaterialUpdateFormComponent > ,
-    private materialDataService: MaterialDataService, private _snackBar: MatSnackBar) {}
-
-  ngOnInit(): void {
-    this.selectedMaterial=this.materialDataService.material;
+  constructor(private dialogRef: MatDialogRef < MaterialUpdateFormComponent > ,
+    @Inject(MAT_DIALOG_DATA) public data: Material) {
+    this.formInstance = new FormGroup({
+      "id_material": new FormControl('', Validators.required),
+      "name": new FormControl('', Validators.required),
+      "description": new FormControl('', Validators.required),
+      "imgBase64": new FormControl(''),
+      "weight": new FormControl(''),
+    });
+    this.formInstance.setValue(data);
+    this.currentMaterial = data;
   }
 
+  ngOnInit(): void {}
+
   updateMaterial(): void {
-    // console.log(this.selectedMaterial);
-    this.service.updateMaterial(this.selectedMaterial)
-      .subscribe(
-        response => {
-          console.log(response);
-          this.onNoClick();
-          this.openSnackBar(this.selectedMaterial.name!);
-        },
-        error => {
-          console.log(error);
-        });
+    this.dialogRef.close(Object.assign(new Material(), this.formInstance.value));
   }
 
   onNoClick(): void {
-    this.dialogRefDe.close();
-  }
-
-  openSnackBar(message: string) {
-    this._snackBar.open(message, " ha sido actualizado");
+    this.dialogRef.close();
   }
 }

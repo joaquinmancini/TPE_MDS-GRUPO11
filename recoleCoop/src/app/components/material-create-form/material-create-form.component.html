@@ -1,26 +1,27 @@
 <div class="container">
   <h3>Nuevo material</h3>
-  <form>
+  <form [formGroup]="formInstance">
     <div class="mb-3">
       <input id="id_material" class="form-control" type="number" placeholder="id_material" aria-label="input example"
-        required [(ngModel)]="material.id_material" name="id_material">
+        required name="id_material" formControlName="id_material">
+      <mat-error *ngIf="formInstance.controls['id_material']?.errors?.required">field required</mat-error>
     </div>
     <div class="mb-3">
       <input id="name" class="form-control" type="text" placeholder="nombre" aria-label="input example" required
-        [(ngModel)]="material.name" name="name">
+        name="name" formControlName="name">
     </div>
     <div class="mb-3">
       <textarea id="descripcion" class="form-control" type="text" placeholder="descripcion" aria-label="input example"
-        [(ngModel)]="material.description" name="description"></textarea>
+        name="description" formControlName="description"></textarea>
     </div>
     <div class="mb-3">
-      <input id="imgMaterial" class="form-control" type="text" [(ngModel)]="material.imgBase64" name="imgBase64">
+      <input id="imgMaterial" class="form-control" type="text" name="imgBase64" formControlName="imgBase64">
     </div>
     <!-- <div class="mb-3">
-      <input id="weight" class="form-control" type="hidden" value="0" [(ngModel)]="material.weight">
+      <input id="weight" class="form-control" type="hidden" value="0" formControlName="weight">
     </div> -->
     <div class="d-block gap-2">
-      <button class="btn btn-success col-5" type="button" (click)="saveMaterial()">Confirmar</button>
+      <button class="btn btn-success col-5" type="button" [disabled]="!formInstance.valid" (click)="saveMaterial()">Confirmar</button>
       <button class="btn btn-danger offset-2 col-5" type="button" (click)="onNoClick()">Cancelar</button>
     </div>
   </form>

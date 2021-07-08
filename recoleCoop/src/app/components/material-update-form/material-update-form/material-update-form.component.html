@@ -1,10 +1,10 @@
 <div class="container">
-  <h3>Nuevo material</h3>
+  <h3>Esta a punto de modificar {{currentMaterial.name}}</h3>
   <form [formGroup]="formInstance">
     <div class="mb-3">
-      <input id="id_material" class="form-control" type="number" placeholder="id_material" aria-label="input example"
-        required name="id_material" formControlName="id_material">
-      <mat-error *ngIf="formInstance.controls['id_material']?.errors?.required">field required</mat-error>
+      <input id="id_material" class="form-control" type="hidden" aria-label="input example" required name="id_material"
+        formControlName="id_material" >
+      <mat-error *ngIf="formInstance.controls['id_material']?.errors?.required">campo requerido</mat-error>
     </div>
     <div class="mb-3">
       <input id="name" class="form-control" type="text" placeholder="nombre" aria-label="input example" required
@@ -15,13 +15,16 @@
         name="description" formControlName="description"></textarea>
     </div>
     <div class="mb-3">
+      <div class="row">
+        <img id="current-material-image" src="" alt="">
+      </div>
       <input id="imgMaterial" class="form-control" type="text" name="imgBase64" formControlName="imgBase64">
     </div>
     <!-- <div class="mb-3">
-      <input id="weight" class="form-control" type="hidden" value="0" formControlName="weight">
-    </div> -->
+        <input id="weight" class="form-control" type="hidden" value="0" formControlName="weight">
+      </div> -->
     <div class="d-block gap-2">
-      <button class="btn btn-success col-5" type="button" [disabled]="!formInstance.valid" (click)="saveMaterial()">Confirmar</button>
+      <button class="btn btn-success col-5" type="button" [disabled]="!formInstance.valid" (click)="updateMaterial()">Confirmar</button>
       <button class="btn btn-danger offset-2 col-5" type="button" (click)="onNoClick()">Cancelar</button>
     </div>
   </form>

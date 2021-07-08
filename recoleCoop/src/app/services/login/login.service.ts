@@ -8,7 +8,7 @@ import { User } from 'src/app/models/user/user.module';
 
 export class LoginService {
   private user:User = {
-    userName: "secretaria",
+    userName: "secretaria.recolecoop@gmail.com",
     password: "123456"
   }
   constructor( private router: Router) { }

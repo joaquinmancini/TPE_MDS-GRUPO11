@@ -29,6 +29,7 @@ import { MaterialCreateFormComponent } from './components/material-create-form/m
 import { MaterialesService } from './services/materiales/materiales.service';
 import { MaterialDeleteConfirmationComponent } from './components/material-delete-confirmation/material-delete-confirmation.component';
 import { MaterialUpdateFormComponent } from './components/material-update-form/material-update-form/material-update-form.component';
+import { CanActivateViaAuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -63,7 +64,7 @@ import { MaterialUpdateFormComponent } from './components/material-update-form/m
     MatSortModule,
     BrowserAnimationsModule
   ],
-  providers: [MaterialesService],
+  providers: [MaterialesService, CanActivateViaAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

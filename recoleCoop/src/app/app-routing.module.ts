@@ -10,18 +10,19 @@ import { EntregamaterialesComponent } from './components/entregamateriales/entre
 import { RetiroDeMaterialesComponent } from './components/retiro-de-materiales/retiro-de-materiales.component';
 import { PedidoListComponent  } from './components/pedido-list/pedido-list.component';
 import {ManageMaterialsComponent} from "./components/manage-materials/manage-materials.component";
+import { CanActivateViaAuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: MaterialesComponent},
   { path: 'login', component: LoginComponent},
   { path: 'pedido-rechazado', component: PickupRejectedComponent},
-  { path: 'pedidos-list', component: PedidoListComponent},
+  { path: 'pedidos-list', component: PedidoListComponent,  canActivate: [CanActivateViaAuthGuard]},
   { path: 'en-construccion', component: UnderConstructionComponent},
   { path: 'detallemateriales', component: DetallematerialesComponent},
   { path: 'entregamateriales', component: EntregamaterialesComponent},
   { path: 'pedido-form', component: PedidoFormComponent},
   { path: 'retiro-material-exitoso', component: RetiroDeMaterialesComponent},
-  { path: 'gestion-materiales', component: ManageMaterialsComponent},
+  { path: 'gestion-materiales', component: ManageMaterialsComponent,  canActivate: [CanActivateViaAuthGuard]},
   { path: 'home', redirectTo: '', pathMatch: 'full'},
   { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
   { path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},

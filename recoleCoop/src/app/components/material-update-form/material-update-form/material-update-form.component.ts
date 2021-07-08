@@ -17,15 +17,16 @@ import {
 } from '@angular/forms';
 
 @Component({
-  selector: 'app-material-create-form',
-  templateUrl: './material-create-form.component.html',
-  styleUrls: ['./material-create-form.component.scss']
+  selector: 'app-material-update-form',
+  templateUrl: './material-update-form.component.html',
+  styleUrls: ['./material-update-form.component.scss']
 })
-export class MaterialCreateFormComponent implements OnInit {
+export class MaterialUpdateFormComponent implements OnInit {
 
   formInstance: FormGroup;
+  currentMaterial: Material;
 
-  constructor(private dialogRef: MatDialogRef < MaterialCreateFormComponent > ,
+  constructor(private dialogRef: MatDialogRef < MaterialUpdateFormComponent > ,
     @Inject(MAT_DIALOG_DATA) public data: Material) {
     this.formInstance = new FormGroup({
       "id_material": new FormControl('', Validators.required),
@@ -34,11 +35,13 @@ export class MaterialCreateFormComponent implements OnInit {
       "imgBase64": new FormControl(''),
       "weight": new FormControl(''),
     });
+    this.formInstance.setValue(data);
+    this.currentMaterial = data;
   }
 
   ngOnInit(): void {}
 
-  saveMaterial(): void {
+  updateMaterial(): void {
     this.dialogRef.close(Object.assign(new Material(), this.formInstance.value));
   }
 

@@ -13,7 +13,7 @@ export class MaterialesService {
   get_materiales:string = "/getMaterials";
   get_material_by_id:string = "/getMaterialById/?id_material=";
   create_material:string = "/saveMaterial";
-  update_material:String = "updateMaterial";
+  update_material:String = "/updateMaterial";
   delete_material:string = "/deleteMaterial/?id_material=";
 
 

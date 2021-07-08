@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" *ngFor="let cartonero of cartoneros">
+        <button type="button" class="list-group-item list-group-item-action " aria-current="true" (click)="selectCartonero(cartonero)">
+          {{cartonero.name}} {{cartonero.lastname}}
+        </button>
+      </div>
+      <div class="col-12 py-3">
+        <button type="button" class="btn btn-info w-100" (click)="create()">Añadir material</button>
+      </div>
+    </div>
+    <div class="col 8">
+      <h3 class="text-center">Ficha de cartonero</h3>
+      <div class="row">
+        <div class="details-section col-3">
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Nombre</li>
+              <li class="list-group-item">Apellido</li>
+              <li class="list-group-item">Direccion</li>
+              <li class="list-group-item">Capacidad</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-section col-9">
+          <div class="card">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{selectedCartonero.name}}</li>
+              <li class="list-group-item">{{selectedCartonero.lastname}}</li>
+              <li class="list-group-item">{{selectedCartonero.address}}</li>
+              <li class="list-group-item">{{selectedCartonero.capacity}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="offset-2 col-3 text-center py-3">
+          <button type="button" class="btn btn-success w-100" (click)="edit(selectedCartonero)"><i class="fas fa-edit"></i></button>
+        </div>
+        <div class="offset-2 col-3 text-center py-3">
+          <button type="button" class="btn btn-danger w-100" (click)="delete(selectedCartonero.id_cartonero!, selectedCartonero.name!)"><i class="fas fa-trash"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

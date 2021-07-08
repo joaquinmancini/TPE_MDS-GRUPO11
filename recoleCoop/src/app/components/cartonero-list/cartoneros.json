@@ -1,0 +1,81 @@
+[{
+    "id_cartonero": 1,
+    "name": "Ev",
+    "lastname": "Heasman",
+    "address": "86936 Merrick Trail",
+    "capacity": "BMW",
+    "materials": []
+  },
+  {
+    "id_cartonero": 2,
+    "name": "Lindy",
+    "lastname": "Lindmark",
+    "address": "67 Eggendart Way",
+    "capacity": "Jeep",
+    "materials": []
+  },
+  {
+    "id_cartonero": 3,
+    "name": "Johnathan",
+    "lastname": "Bowkley",
+    "address": "8361 Utah Crossing",
+    "capacity": "Mitsubishi",
+    "materials": []
+  },
+  {
+    "id_cartonero": 4,
+    "name": "Lanie",
+    "lastname": "Climson",
+    "address": "46 Roxbury Street",
+    "capacity": "BMW",
+    "materials": []
+  },
+  {
+    "id_cartonero": 5,
+    "name": "Hetti",
+    "lastname": "Fery",
+    "address": "1 Iowa Lane",
+    "capacity": "Toyota",
+    "materials": []
+  },
+  {
+    "id_cartonero": 6,
+    "name": "Townsend",
+    "lastname": "Boadby",
+    "address": "1235 Dennis Pass",
+    "capacity": "Lincoln",
+    "materials": []
+  },
+  {
+    "id_cartonero": 7,
+    "name": "Arlen",
+    "lastname": "Colvie",
+    "address": "7 Derek Parkway",
+    "capacity": "Audi",
+    "materials": []
+  },
+  {
+    "id_cartonero": 8,
+    "name": "Vassily",
+    "lastname": "Ratazzi",
+    "address": "14 Dahle Pass",
+    "capacity": "Buick",
+    "materials": []
+  },
+  {
+    "id_cartonero": 9,
+    "name": "Ignacius",
+    "lastname": "Secker",
+    "address": "494 Charing Cross Crossing",
+    "capacity": "Chevrolet",
+    "materials": []
+  },
+  {
+    "id_cartonero": 10,
+    "name": "Inness",
+    "lastname": "Grandison",
+    "address": "5931 American Ash Junction",
+    "capacity": "Scion",
+    "materials": []
+  }
+]

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { Material } from 'src/app/models/material/material.model';
 import { Observable } from 'rxjs';
-
+import CartonerosData from 'src/app/components/cartonero-list/cartoneros.json';
 
 @Injectable({
   providedIn: 'root'

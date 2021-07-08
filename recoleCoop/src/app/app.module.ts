@@ -30,6 +30,11 @@ import { MaterialesService } from './services/materiales/materiales.service';
 import { MaterialDeleteConfirmationComponent } from './components/material-delete-confirmation/material-delete-confirmation.component';
 import { MaterialUpdateFormComponent } from './components/material-update-form/material-update-form/material-update-form.component';
 import { CanActivateViaAuthGuard } from './guards/auth.guard';
+import { CartonerosComponent } from './pages/cartoneros/cartoneros.component';
+import { CartoneroListComponent } from './components/cartonero-list/cartonero-list.component';
+import { CartoneroCreateFormComponent } from './components/cartonero-create-form/cartonero-create-form.component';
+import { CartoneroUpdateFormComponent } from './components/cartonero-update-form/cartonero-update-form.component';
+import { CartoneroDeleteConfirmationComponent } from './components/cartonero-delete-confirmation/cartonero-delete-confirmation.component';
 
 
 @NgModule({
@@ -50,6 +55,11 @@ import { CanActivateViaAuthGuard } from './guards/auth.guard';
     MaterialCreateFormComponent,
     MaterialDeleteConfirmationComponent,
     MaterialUpdateFormComponent,
+    CartonerosComponent,
+    CartoneroListComponent,
+    CartoneroCreateFormComponent,
+    CartoneroUpdateFormComponent,
+    CartoneroDeleteConfirmationComponent,
   ],
   imports: [
     BrowserModule,

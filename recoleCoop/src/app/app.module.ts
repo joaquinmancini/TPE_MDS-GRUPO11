@@ -26,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialCreateFormComponent } from './components/material-create-form/material-create-form.component';
 import { MaterialesService } from './services/materiales/materiales.service';
 import { MaterialDeleteConfirmationComponent } from './components/material-delete-confirmation/material-delete-confirmation.component';
+import { CanActivateViaAuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -56,7 +57,7 @@ import { MaterialDeleteConfirmationComponent } from './components/material-delet
     MatSnackBarModule,
     BrowserAnimationsModule
   ],
-  providers: [MaterialesService],
+  providers: [MaterialesService, CanActivateViaAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

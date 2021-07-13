@@ -167,6 +167,76 @@ $my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-cus
 
 
 /*======================*/
+/** Backgrounds*/
+
+.bcg-white, .bcg-white-hover {
+  background-color: var(--white) !important;
+}
+
+.bcg-lightgrey, .bcg-lightgrey-hover {
+  background-color: var(--lightgrey) !important;
+}
+
+.bcg-grey, .bcg-grey-hover {
+  background-color: var(--grey) !important;
+}
+
+.bcg-black, .bcg-black-hover {
+  background-color: var(--black) !important;
+}
+
+.bcg-primary, .bcg-primary-hover {
+  background-color: var(--primary) !important;
+}
+
+.bcg-secondary, .bcg-secondary-hover {
+  background-color: var(--secondary) !important;
+}
+
+.bcg-success, .bcg-success-hover {
+  background-color: var(--success) !important;
+}
+
+.bcg-warning, .bcg-warning-hover {
+  background-color: var(--warning) !important;
+}
+
+/*=======================*/
+/** Colors*/
+
+.fnt-white, .fnt-white-hover:hover {
+  color: var(--white) !important;
+}
+
+.fnt-lightgrey, .fnt-lightgrey-hover:hover {
+  color: var(--lightgrey) !important;
+}
+
+.fnt-grey, .fnt-grey-hover:hover {
+  color: var(--grey) !important;
+}
+
+.fnt-black, .fnt-black-hover:hover {
+  color: var(--black) !important;
+}
+
+.fnt-primary, .fnt-primary-hover:hover {
+  color: var(--primary) !important;
+}
+
+.fnt-secondary, .fnt-secondary-hover:hover {
+  color: var(--secondary) !important;
+}
+
+.fnt-success, .fnt-success-hover:hover {
+  color: var(--success) !important;
+}
+
+.warning-font, .warning-hover-font:hover {
+  color: var(--warning) !important;
+}
+
+/*=======================*/
 
 html {
   -webkit-user-select: none;

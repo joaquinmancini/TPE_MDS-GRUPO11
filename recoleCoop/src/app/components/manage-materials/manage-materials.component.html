@@ -21,16 +21,16 @@
                 <td class="text-center">{{material.description}}</td>
                 <td class="text-center">{{material.imgBase64}}</td>
                 <td class="text-center">
-                  <button type="button" class="btn btn-success" (click)="edit(material)"><i class="fas fa-edit"></i></button>
+                  <button type="button" class="btn bcg-success fnt-white fnt-lightgrey-hover" (click)="edit(material)"><i class="fas fa-edit"></i></button>
                 </td>
                 <td class="text-center">
-                  <button type="button" class="btn btn-danger" (click)="delete(material.id_material!, material.name!)"><i class="fas fa-trash"></i></button>
+                  <button type="button" class="btn bcg-warning fnt-white fnt-lightgrey-hover" (click)="delete(material.id_material!, material.name!)"><i class="fas fa-trash"></i></button>
                 </td>
               </tr>
               </tbody>
             </table>
           </div>
-          <button type="button" class="btn btn-info" (click)="create()">Añadir material <i class="fas fa-plus-square"></i></button>
+          <button type="button" class="btn bcg-secondary fnt-white fnt-primary-hover" (click)="create()">Añadir material</button>
         </div>
       </div>
     </div>

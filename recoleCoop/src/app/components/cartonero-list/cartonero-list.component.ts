@@ -44,7 +44,6 @@ export class CartoneroListComponent implements OnInit {
 
   chooseCartonero(cartonero: Cartonero) {
     this.selectedCartonero = cartonero;
-    console.log(this.selectedCartonero);
   }
 
   //Acciones
@@ -65,7 +64,6 @@ export class CartoneroListComponent implements OnInit {
               console.log(error);
             });
         this.cartoneros.push(result);
-        // console.log(this.selectedCartonero);
       }
     });
   }
@@ -140,7 +138,6 @@ export class CartoneroListComponent implements OnInit {
       this.selectedCartonero = this.cartoneros[this.cartoneros.length-1];
     }else {
       this.selectedCartonero = new Cartonero();
-      // console.log(this.selectedCartonero);
     }
   }
 

@@ -31,7 +31,7 @@ export class MaterialUpdateFormComponent implements OnInit {
     this.formInstance = new FormGroup({
       "id_material": new FormControl('', Validators.required),
       "name": new FormControl('', Validators.required),
-      "description": new FormControl('', Validators.required),
+      "description": new FormControl(''),
       "imgBase64": new FormControl(''),
       "weight": new FormControl(''),
     });

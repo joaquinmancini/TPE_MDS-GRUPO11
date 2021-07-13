@@ -35,6 +35,7 @@ import { CartoneroListComponent } from './components/cartonero-list/cartonero-li
 import { CartoneroCreateFormComponent } from './components/cartonero-create-form/cartonero-create-form.component';
 import { CartoneroUpdateFormComponent } from './components/cartonero-update-form/cartonero-update-form.component';
 import { CartoneroDeleteConfirmationComponent } from './components/cartonero-delete-confirmation/cartonero-delete-confirmation.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import { CartoneroDeleteConfirmationComponent } from './components/cartonero-del
     CartoneroCreateFormComponent,
     CartoneroUpdateFormComponent,
     CartoneroDeleteConfirmationComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Inject,
+  OnInit
+} from '@angular/core';
+import { Cartonero } from "src/app/models/cartonero/cartonero.model";
+import {
+  MatDialogRef,
+  MAT_DIALOG_DATA
+} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cartonero-delete-confirmation',
@@ -7,9 +16,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartoneroDeleteConfirmationComponent implements OnInit {
 
-  constructor() { }
+  selectedCartonero: Cartonero;
 
-  ngOnInit(): void {
+  constructor(private dialogRef: MatDialogRef < CartoneroDeleteConfirmationComponent > ,
+    @Inject(MAT_DIALOG_DATA) public data: Cartonero) {
+      this.selectedCartonero = data;
+    }
+
+  ngOnInit(): void {}
+
+
+  deleteCartonero(): void {
+    this.dialogRef.close(Object.assign(new Cartonero(), this.data));    
+  }
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

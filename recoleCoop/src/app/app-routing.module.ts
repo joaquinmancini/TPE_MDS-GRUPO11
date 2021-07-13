@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'pedido-form', component: PedidoFormComponent},
   { path: 'retiro-material-exitoso', component: RetiroDeMaterialesComponent},
   { path: 'gestion-materiales', component: ManageMaterialsComponent,  canActivate: [CanActivateViaAuthGuard]},
-  { path: 'gestion-cartoneros', component: CartonerosComponent},
+  { path: 'gestion-cartoneros', component: CartonerosComponent,  canActivate: [CanActivateViaAuthGuard]},
   { path: 'home', redirectTo: '', pathMatch: 'full'},
   { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
   { path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},

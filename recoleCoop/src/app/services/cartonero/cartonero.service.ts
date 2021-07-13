@@ -10,10 +10,10 @@ import CartonerosData from 'src/app/components/cartonero-list/cartoneros.json';
 export class CartoneroService {
   url: string = "http://localhost:8080/api/cartonero";
   get_cartoneros:string = "/getCartoneros";
-  get_cartonero_by_id:string = "/getCartonerolById/?id=";
+  get_cartonero_by_id:string = "/getCartonerolById/?id_cartonero=";
   create_cartonero:string = "/saveCartonero";
   update_cartonero:String = "/updateCartonero";
-  delete_cartonero:string = "/deleteCartonero/?id=";
+  delete_cartonero:string = "/deleteCartonero/?id_cartonero=";
 
   constructor(public http: HttpClient) { }
 

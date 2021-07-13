@@ -1,10 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-4">
-      <div class="list-group" *ngFor="let cartonero of cartoneros">
-        <button type="button" class="list-group-item list-group-item-action " aria-current="true" (click)="chooseCartonero(cartonero)">
-          {{cartonero.name}} {{cartonero.lastname}}
-        </button>
+      <div class="list-group recolector-list">
+        <div class="recolector-list-item" *ngFor="let cartonero of cartoneros">
+          <button type="button" class="list-group-item list-group-item-action " aria-current="true"
+            (click)="chooseCartonero(cartonero)">
+            {{cartonero.name}} {{cartonero.lastname}}
+          </button>
+        </div>
       </div>
       <div class="col-12 py-3">
         <button type="button" class="btn btn-info w-100" (click)="create()">Añadir cartonero</button>
@@ -34,10 +37,12 @@
           </div>
         </div>
         <div class="offset-2 col-3 text-center py-3">
-          <button type="button" class="btn btn-success w-100" (click)="edit(selectedCartonero)"><i class="fas fa-edit"></i></button>
+          <button type="button" class="btn btn-success w-100" (click)="edit(selectedCartonero)"><i
+              class="fas fa-edit"></i></button>
         </div>
         <div class="offset-2 col-3 text-center py-3">
-          <button type="button" class="btn btn-danger w-100" (click)="delete(selectedCartonero.id!, selectedCartonero.name!)"><i class="fas fa-trash"></i></button>
+          <button type="button" class="btn btn-danger w-100"
+            (click)="delete(selectedCartonero.id!, selectedCartonero.name!)"><i class="fas fa-trash"></i></button>
         </div>
       </div>
     </div>

@@ -19,6 +19,7 @@ import {
   CartoneroCreateFormComponent
 } from '../cartonero-create-form/cartonero-create-form.component';
 import { CartoneroUpdateFormComponent } from '../cartonero-update-form/cartonero-update-form.component';
+import { CartoneroDeleteConfirmationComponent } from '../cartonero-delete-confirmation/cartonero-delete-confirmation.component';
 
 @Component({
   selector: 'app-cartonero-list',
@@ -43,6 +44,7 @@ export class CartoneroListComponent implements OnInit {
 
   chooseCartonero(cartonero: Cartonero) {
     this.selectedCartonero = cartonero;
+    console.log(this.selectedCartonero);
   }
 
   //Acciones
@@ -63,6 +65,7 @@ export class CartoneroListComponent implements OnInit {
               console.log(error);
             });
         this.cartoneros.push(result);
+        // console.log(this.selectedCartonero);
       }
     });
   }
@@ -97,6 +100,48 @@ export class CartoneroListComponent implements OnInit {
     this.selectedCartonero = cartonero;
   }
 
-  delete(id: number, name: String) {}
+
+  //Deletion of cartoneros
+  delete(id: number, name: String) {
+    const dialogRef = this.dialog.open(CartoneroDeleteConfirmationComponent, {
+      data: {
+        id,
+        name,
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this._cartonero.deleteCartonero(result.id)
+          .subscribe(
+            response => {
+              dialogRef.close();
+              this._snackBar.open(result.name, " ha sido borrado", {
+                duration: 2000
+              });
+            },
+            error => {
+              console.log(error);
+            });
+        this.deleteCartoneroInList(result.id);
+        this.getLastCartoneroOfList();
+      }
+    });
+  }
+
+  deleteCartoneroInList(id: number) {
+    const matIndex = this.cartoneros.findIndex(element => element.id == id);
+    let newCartoneros = [...this.cartoneros];
+    newCartoneros.splice(matIndex, 1);
+    this.cartoneros = newCartoneros;
+  }
+
+  getLastCartoneroOfList(){
+    if(this.cartoneros.length>0){
+      this.selectedCartonero = this.cartoneros[this.cartoneros.length-1];
+    }else {
+      this.selectedCartonero = new Cartonero();
+      // console.log(this.selectedCartonero);
+    }
+  }
 
 }

@@ -12,6 +12,7 @@ import { PedidoListComponent  } from './components/pedido-list/pedido-list.compo
 import {ManageMaterialsComponent} from "./components/manage-materials/manage-materials.component";
 import { CanActivateViaAuthGuard } from './guards/auth.guard';
 import { CartonerosComponent } from './pages/cartoneros/cartoneros.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: MaterialesComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'retiro-material-exitoso', component: RetiroDeMaterialesComponent},
   { path: 'gestion-materiales', component: ManageMaterialsComponent,  canActivate: [CanActivateViaAuthGuard]},
   { path: 'gestion-cartoneros', component: CartonerosComponent,  canActivate: [CanActivateViaAuthGuard]},
+  { path: 'contacto', component: ContactComponent},
   { path: 'home', redirectTo: '', pathMatch: 'full'},
   { path: '', redirectTo: 'en-construccion', pathMatch: 'full'},
   { path: '**', redirectTo: 'en-construccion', pathMatch: 'full'},

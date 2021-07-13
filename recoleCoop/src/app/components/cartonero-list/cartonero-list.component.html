@@ -3,7 +3,7 @@
     <div class="col-4">
       <div class="list-group recolector-list">
         <div class="recolector-list-item" *ngFor="let cartonero of cartoneros">
-          <button type="button" class="list-group-item list-group-item-action " aria-current="true"
+          <button type="button" class="list-group-item list-group-item-action bcg-secondary fnt-white fnt-primary-hover" aria-current="true"
             (click)="chooseCartonero(cartonero)">
             {{cartonero.name}} {{cartonero.lastname}}
           </button>
@@ -19,20 +19,20 @@
         <div class="details-section col-3">
           <div class="card">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Nombre</li>
-              <li class="list-group-item">Apellido</li>
-              <li class="list-group-item">Direccion</li>
-              <li class="list-group-item">Capacidad</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">Nombre</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">Apellido</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">Direccion</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">Capacidad</li>
             </ul>
           </div>
         </div>
         <div class="card-section col-9">
           <div class="card">
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">{{selectedCartonero.name}}</li>
-              <li class="list-group-item">{{selectedCartonero.lastname}}</li>
-              <li class="list-group-item">{{selectedCartonero.address}}</li>
-              <li class="list-group-item">{{selectedCartonero.transportLoad}}</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">{{selectedCartonero.name}}</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">{{selectedCartonero.lastname}}</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">{{selectedCartonero.address}}</li>
+              <li class="list-group-item bcg-secondary-transparent fnt-white">{{selectedCartonero.transportLoad}}</li>
             </ul>
           </div>
         </div>

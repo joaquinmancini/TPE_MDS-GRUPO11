@@ -201,6 +201,39 @@ $my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-cus
   background-color: var(--warning) !important;
 }
 
+/*Transparent*/
+.bcg-white-transparent, .bcg-white-transparent-hover {
+  background-color: var(--white-transparent) !important;
+}
+
+.bcg-lightgrey-transparent, .bcg-lightgrey-transparent-hover {
+  background-color: var(--lightgrey-transparent) !important;
+}
+
+.bcg-grey-transparent, .bcg-grey-transparent-hover {
+  background-color: var(--grey-transparent) !important;
+}
+
+.bcg-black-transparent, .bcg-black-transparent-hover {
+  background-color: var(--black-transparent) !important;
+}
+
+.bcg-primary-transparent, .bcg-primary-transparent-hover {
+  background-color: var(--primary-transparent) !important;
+}
+
+.bcg-secondary-transparent, .bcg-secondary-transparent-hover {
+  background-color: var(--secondary-transparent) !important;
+}
+
+.bcg-success-transparent, .bcg-success-transparent-hover {
+  background-color: var(--success-transparent) !important;
+}
+
+.bcg-warning-transparent, .bcg-warning-transparent-hover {
+  background-color: var(--warning-transparent) !important;
+}
+
 /*=======================*/
 /** Colors*/
 
@@ -268,3 +301,117 @@ footer {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+ /* ANIMATIONS */
+  
+  /* Simple CSS3 Fade-in-down Animation */
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  
+  .fadeIn {
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+  
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+  
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    animation-duration:1s;
+  }
+  
+  .fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+  }
+  
+  .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+  
+  .fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+  }
+  
+  .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  
+  .fadeIn.fifth {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+  }
+  
+  .fadeIn.sixth {
+    -webkit-animation-delay: 1.4s;
+    -moz-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+  }
+  
+  .fadeIn.seventh {
+    -webkit-animation-delay: 1.6s;
+    -moz-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+  }
+  
+  .fadeIn.eighth {
+    -webkit-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+  }
+  
+  .fadeIn.ninth {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+  
+  /* Simple CSS3 Fade-in Animation */

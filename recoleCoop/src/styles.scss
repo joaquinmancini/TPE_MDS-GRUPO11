@@ -1,5 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '~@angular/material/theming';
+@include mat-core();
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-rcprimary: (
+    50 : #fbf4eb,
+    100 : #f6e4cd,
+    200 : #f0d2ac,
+    300 : #e9bf8a,
+    400 : #e5b271,
+    500 : #e0a458,
+    600 : #dc9c50,
+    700 : #d89247,
+    800 : #d3893d,
+    900 : #cb782d,
+    A100 : #ffffff,
+    A200 : #ffeada,
+    A400 : #ffcfa7,
+    A700 : #ffc18d,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-rcsecondary: (
+    50 : #e6e6e9,
+    100 : #c0c1c8,
+    200 : #9698a3,
+    300 : #6c6e7e,
+    400 : #4d4f63,
+    500 : #2d3047,
+    600 : #282b40,
+    700 : #222437,
+    800 : #1c1e2f,
+    900 : #111320,
+    A100 : #637dff,
+    A200 : #3052ff,
+    A400 : #002afc,
+    A700 : #0026e2,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-rcsuccess: (
+    50 : #e8f3ef,
+    100 : #c6e2d7,
+    200 : #a0cebc,
+    300 : #7abaa1,
+    400 : #5eac8c,
+    500 : #419d78,
+    600 : #3b9570,
+    700 : #328b65,
+    800 : #2a815b,
+    900 : #1c6f48,
+    A100 : #acffd5,
+    A200 : #79ffbc,
+    A400 : #46ffa2,
+    A700 : #2cff96,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-rcwarning: (
+    50 : #fceded,
+    100 : #f9d3d1,
+    200 : #f5b5b3,
+    300 : #f09794,
+    400 : #ed817d,
+    500 : #ea6b66,
+    600 : #e7635e,
+    700 : #e45853,
+    800 : #e14e49,
+    900 : #db3c38,
+    A100 : #ffffff,
+    A200 : #fff2f1,
+    A400 : #ffc0be,
+    A700 : #ffa7a5,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+:root {
+  --transparent: #ffffff00;
+  --white: #ffffff;
+  --lightgrey: #d3d3d3;
+  --grey: #8d8d8d;
+  --black: #000000;
+  --primary: #E0A458;
+  --secondary: #2D3047;
+  --success: #419D78;
+  --warning: #EA6B66;
+  /*Transparencias*/
+  --primary-transparent: rgba(224, 164, 88, 0.7);
+  --secondary-transparent: rgba(45, 48, 71, 0.7);
+  --success-transparent: rgba(65, 157, 120, 0.7);
+  --warning-transparent: rgba(234, 107, 102, 0.7);
+}
+
+/* ======== Angular material custom themes ======== */ 
+$my-custom-primary: mat-palette($md-rcprimary);
+// $my-custom-secondary: mat-palette($md-rcsecondary);
+$my-custom-accent: mat-palette($md-rcsuccess);
+$my-custom-warn: mat-palette($md-rcwarning);
+
+$my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+@include angular-material-theme($my-custom-theme);
+
+
+/*======================*/
 
 html {
   -webkit-user-select: none;

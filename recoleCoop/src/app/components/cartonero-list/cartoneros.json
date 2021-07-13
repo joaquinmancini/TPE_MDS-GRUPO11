@@ -1,81 +1,81 @@
 [{
-    "id_cartonero": 1,
+    "id": 1,
     "name": "Ev",
     "lastname": "Heasman",
     "address": "86936 Merrick Trail",
-    "capacity": "BMW",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 2,
+    "id": 2,
     "name": "Lindy",
     "lastname": "Lindmark",
     "address": "67 Eggendart Way",
-    "capacity": "Jeep",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 3,
+    "id": 3,
     "name": "Johnathan",
     "lastname": "Bowkley",
     "address": "8361 Utah Crossing",
-    "capacity": "Mitsubishi",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 4,
+    "id": 4,
     "name": "Lanie",
     "lastname": "Climson",
     "address": "46 Roxbury Street",
-    "capacity": "BMW",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 5,
+    "id": 5,
     "name": "Hetti",
     "lastname": "Fery",
     "address": "1 Iowa Lane",
-    "capacity": "Toyota",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 6,
+    "id": 6,
     "name": "Townsend",
     "lastname": "Boadby",
     "address": "1235 Dennis Pass",
-    "capacity": "Lincoln",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 7,
+    "id": 7,
     "name": "Arlen",
     "lastname": "Colvie",
     "address": "7 Derek Parkway",
-    "capacity": "Audi",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 8,
+    "id": 8,
     "name": "Vassily",
     "lastname": "Ratazzi",
     "address": "14 Dahle Pass",
-    "capacity": "Buick",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 9,
+    "id": 9,
     "name": "Ignacius",
     "lastname": "Secker",
     "address": "494 Charing Cross Crossing",
-    "capacity": "Chevrolet",
+    "transportLoad": 20,
     "materials": []
   },
   {
-    "id_cartonero": 10,
+    "id": 10,
     "name": "Inness",
     "lastname": "Grandison",
     "address": "5931 American Ash Junction",
-    "capacity": "Scion",
+    "transportLoad": 20,
     "materials": []
   }
 ]

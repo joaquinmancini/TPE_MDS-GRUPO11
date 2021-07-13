@@ -18,6 +18,7 @@ import {
 import {
   CartoneroCreateFormComponent
 } from '../cartonero-create-form/cartonero-create-form.component';
+import { CartoneroUpdateFormComponent } from '../cartonero-update-form/cartonero-update-form.component';
 
 @Component({
   selector: 'app-cartonero-list',
@@ -31,18 +32,21 @@ export class CartoneroListComponent implements OnInit {
   constructor(private _cartonero: CartoneroService,
     private dialog: MatDialog,
     private _snackBar: MatSnackBar) {
-    this.cartoneros = CartonerosData;
-    this.selectedCartonero = this.cartoneros[0];
+    this.cartoneros = [];
+    this.selectedCartonero = new Cartonero();
   }
 
   ngOnInit(): void {
-    this.cartoneros.sort((a, b) => a.id_cartonero!-b.id_cartonero!)
+    this._cartonero.getCartoneros()
+      .subscribe(data => this.cartoneros = data.sort((a, b) => a.id!-b.id!));
   }
 
-  selectCartonero(cartonero: Cartonero) {
+  chooseCartonero(cartonero: Cartonero) {
     this.selectedCartonero = cartonero;
   }
 
+  //Acciones
+  //Creation of cartoneros
   create() {
     const dialogRef = this.dialog.open(CartoneroCreateFormComponent, {});
     dialogRef.afterClosed().subscribe(result => {
@@ -63,8 +67,36 @@ export class CartoneroListComponent implements OnInit {
     });
   }
 
-  edit(cartonero: Cartonero) {}
+  edit(cartonero: Cartonero) {
+    const dialogRef = this.dialog.open(CartoneroUpdateFormComponent, {
+      data: cartonero,
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this._cartonero.updateCartonero(result)
+          .subscribe(
+            response => {
+              dialogRef.close();
+              this._snackBar.open(result.name!, " ha sido actualizado", {
+                duration: 2000
+              });
+            },
+            error => {
+              console.log(error);
+            });
+        this.updateCartoneroInList(result);
+      }
+    });
+  }
 
-  delete(id_cartonero: number, name: String) {}
+  updateCartoneroInList(cartonero: Cartonero) {
+    const matIndex = this.cartoneros.findIndex(element => element.id == cartonero.id);
+    let newCartoneros = [...this.cartoneros];
+    newCartoneros[matIndex] = cartonero;
+    this.cartoneros = newCartoneros;
+    this.selectedCartonero = cartonero;
+  }
+
+  delete(id: number, name: String) {}
 
 }

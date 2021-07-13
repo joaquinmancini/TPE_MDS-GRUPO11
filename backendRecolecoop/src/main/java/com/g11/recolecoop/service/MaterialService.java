@@ -25,9 +25,11 @@ public class MaterialService {
         return materialRepository.findById(id_material).get();
     }
 
+    public void updateMaterial(Material material) { 
+        materialRepository.save(material); 
+    }
+
     public void deleteMaterial(Long id_material) {
         materialRepository.deleteById(id_material);
     }
-
-    public void updateMaterial(Material material) { materialRepository.save(material) ; }
 }

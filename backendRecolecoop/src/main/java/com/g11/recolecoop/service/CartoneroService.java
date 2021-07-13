@@ -22,15 +22,15 @@ public class CartoneroService {
         return cartoneroRepository.findAll();
     }
 
-    public Cartonero getById(Long idCartonero) {
-        return cartoneroRepository.getById(idCartonero);
+    public Cartonero getById(Long id_cartonero) {
+        return cartoneroRepository.findById(id_cartonero).get();
     }
 
     public void update(Cartonero cartonero) {
         cartoneroRepository.save(cartonero);
     }
 
-    public void delete(Cartonero cartonero) {
-        cartoneroRepository.delete(cartonero);
+    public void delete(Long id) {
+        cartoneroRepository.deleteById(id);
     }
 }

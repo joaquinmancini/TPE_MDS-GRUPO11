@@ -1,1 +1,34 @@
-<p>cartonero-update-form works!</p>
+<div class="container">
+    <h3>Esta a punto de modificar {{formInstance.value.name}}</h3>
+    <form [formGroup]="formInstance">
+        <div class="mb-3">
+          <input id="id_cartonero" class="form-control" type="hidden" placeholder="id" aria-label="input example" required
+            name="id" formControlName="id">
+        </div>
+      <div class="mb-3">
+        <input id="name" class="form-control" type="text" placeholder="name" aria-label="input example" required
+          name="name" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <input id="lastname" class="form-control" type="text" placeholder="lastname" aria-label="input example" required
+          name="lastname" formControlName="lastname">
+      </div>
+      <div class="mb-3">
+        <input id="address" class="form-control" type="text" placeholder="address" aria-label="input example" required
+          name="address" formControlName="address">
+      </div>
+      <div class="mb-3">
+        <input id="transportLoad" class="form-control" type="number" placeholder="transport capacity" aria-label="input example" required
+          name="transportLoad" formControlName="transportLoad">
+      </div>
+      <div class="mb-3">
+        <input id="materials" class="form-control" type="hidden" aria-label="input example" name="materialList"
+          formControlName="materialList" >
+      </div>
+      <div class="d-block gap-2">
+        <button class="btn btn-success col-5" type="button" [disabled]="!formInstance.valid" (click)="updateCartonero()">Confirmar</button>
+        <button class="btn btn-danger offset-2 col-5" type="button" (click)="onNoClick()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  

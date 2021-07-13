@@ -2,11 +2,6 @@
     <h3>Nuevo cartonero</h3>
     <form [formGroup]="formInstance">
       <div class="mb-3">
-        <input id="id_cartonero" class="form-control" type="number" placeholder="id_cartonero" aria-label="input example"
-          required name="id_cartonero" formControlName="id_cartonero">
-        <mat-error *ngIf="formInstance.controls['id_cartonero']?.errors?.required">field required</mat-error>
-      </div>
-      <div class="mb-3">
         <input id="name" class="form-control" type="text" placeholder="nombre" aria-label="input example" required
           name="name" formControlName="name">
       </div>
@@ -15,16 +10,13 @@
           name="lastname" formControlName="lastname">
       </div>
       <div class="mb-3">
-        <textarea id="address" class="form-control" type="text" placeholder="address" aria-label="input example"
-          name="address" formControlName="address"></textarea>
+        <input id="address" class="form-control" type="text" placeholder="address" aria-label="input example"
+          name="address" formControlName="address">
       </div>
       <div class="mb-3">
-        <textarea id="address" class="form-control" type="text" placeholder="capacity" aria-label="input example"
-          name="capacity" formControlName="capacity"></textarea>
+        <input id="address" class="form-control" type="number" placeholder="transportLoad" aria-label="input example"
+          name="transportLoad" formControlName="transportLoad">
       </div>
-      <!-- <div class="mb-3">
-        <input id="weight" class="form-control" type="hidden" value="0" formControlName="weight">
-      </div> -->
       <div class="d-block gap-2">
         <button class="btn btn-success col-5" type="button" [disabled]="!formInstance.valid" (click)="saveCartonero()">Confirmar</button>
         <button class="btn btn-danger offset-2 col-5" type="button" (click)="onNoClick()">Cancelar</button>

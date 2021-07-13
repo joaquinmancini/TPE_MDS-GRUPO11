@@ -10,10 +10,10 @@ import CartonerosData from 'src/app/components/cartonero-list/cartoneros.json';
 export class CartoneroService {
   url: string = "http://localhost:8080/api/cartonero";
   get_cartoneros:string = "/getCartoneros";
-  get_cartonero_by_id:string = "/getCartonerolById/?id_cartonero=";
+  get_cartonero_by_id:string = "/getCartonerolById/?id=";
   create_cartonero:string = "/saveCartonero";
   update_cartonero:String = "/updateCartonero";
-  delete_cartonero:string = "/deleteCartonero/?id_cartonero=";
+  delete_cartonero:string = "/deleteCartonero/?id=";
 
   constructor(public http: HttpClient) { }
 
@@ -22,12 +22,12 @@ export class CartoneroService {
   //   return cartonero;
   // }
 
-  getCartonero(): Observable<Cartonero[]>{
+  getCartoneros(): Observable<Cartonero[]>{
     return this.http.get<Cartonero[]>(this.url+this.get_cartoneros)
   }
 
-  getCartoneroById(id_cartonero:number): Observable<Cartonero> {
-    return this.http.get<Cartonero>(this.url+this.get_cartonero_by_id+id_cartonero);
+  getCartoneroById(id:number): Observable<Cartonero> {
+    return this.http.get<Cartonero>(this.url+this.get_cartonero_by_id+id);
   }
 
   createCartonero(data:any): Observable<any> {
@@ -38,8 +38,8 @@ export class CartoneroService {
     return this.http.post(this.url+this.update_cartonero, data);
   }
 
-  deleteCartonero(id_cartonero:number): Observable<any> {
-    return this.http.post(this.url+this.delete_cartonero+id_cartonero, null);
+  deleteCartonero(id:number): Observable<any> {
+    return this.http.post(this.url+this.delete_cartonero+id, null);
   }
 
 }

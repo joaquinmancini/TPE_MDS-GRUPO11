@@ -29,13 +29,13 @@ public class CartoneroController {
     }
 
     @GetMapping("/getCartoneroById")
-    public Cartonero getCartoneroById(@Valid @RequestParam Long idCartonero) {
-        return cartoneroService.getById(idCartonero);
+    public Cartonero getCartoneroById(@Valid @RequestParam Long id_cartonero) {
+        return cartoneroService.getById(id_cartonero);
     }
 
     @PostMapping("/deleteCartonero")
-    public void deleteCartonero(@Valid @RequestBody Cartonero cartonero) {
-        cartoneroService.delete(cartonero);
+    public void deleteCartonero(@Valid @RequestParam Long id_cartonero) {
+        cartoneroService.delete(id_cartonero);
     }
 
     @PostMapping("/updateCartonero")

@@ -28,11 +28,10 @@ export class CartoneroCreateFormComponent implements OnInit {
   constructor(private dialogRef: MatDialogRef < CartoneroCreateFormComponent > ,
     @Inject(MAT_DIALOG_DATA) public data: Cartonero) {
       this.formInstance = new FormGroup({
-        "id_cartonero": new FormControl('', Validators.required),
         "name": new FormControl('', Validators.required),
         "lastname": new FormControl('', Validators.required),
         "address": new FormControl('', Validators.required),
-        "capacity": new FormControl('', Validators.required),
+        "transportLoad": new FormControl('', Validators.required),
       });
     }
 
